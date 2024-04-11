@@ -1,0 +1,23 @@
+#include <stdio.h> 
+#include <string.h>
+#define TAM 100
+
+void inverte(char string[TAM]){
+  int i, j;
+  char aux;
+  for(i = 0, j = strlen(string)-1; i < j; i++, j--){
+    aux = string[i];
+    string[i] = string[j];
+    string[j] = aux;
+  }
+  printf("String invertida: %s",string);
+
+}
+
+int main () {
+
+  char string[TAM] = "roupa";
+  inverte(string);
+  
+  return 0;
+}
